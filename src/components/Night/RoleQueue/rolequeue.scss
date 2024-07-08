@@ -1,0 +1,83 @@
+.RQ_container {
+  color: var(--white);
+
+  .back_to_settings {
+    display: flex;
+
+    button {
+      color: var(--red);
+      background-color: rgb(46, 46, 46);
+    }
+  }
+
+  .title {
+    h1 {
+      color: var(--red);
+    }
+  }
+
+  .role_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .role {
+      padding-top: 8px;
+      background-color: #ff000025;
+      font-size: 2rem;
+    }
+  }
+
+  .start_night_btn {
+    margin-top: var(--margin-top);
+    margin-bottom: 2rem;
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+
+    button {
+      font-size: 2rem;
+      padding: 1rem 2rem 0.5rem;
+      background-color: var(--red);
+    }
+
+    button:active {
+      color: var(--black);
+      background-color: var(--white);
+    }
+  }
+}
+
+// ~ MOBILE PORTRAIT
+
+// ~ MOBILE LANDSCAPE
+@media (min-width: 450px) and (max-width: 950px) and (min-height: 300px) and (max-height: 500px) {
+  .RQ_container {
+    .role_list {
+      height: 100% !important;
+      overflow-y: auto;
+
+      .role {
+        font-size: 1.7rem;
+      }
+    }
+
+    .start_night_btn {
+      margin: 1rem 0 1rem;
+      color: var(--white);
+      border-radius: 5px;
+      border: none;
+
+      button {
+        font-size: 1.7rem;
+        padding: 1rem 2rem 0.5rem;
+        background-color: var(--red);
+      }
+
+      button:active {
+        color: var(--black);
+        background-color: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.TT_container {
+  .speaker_name {
+    background: rgba(0, 0, 0, 0.32);
+    font-weight: 900;
+  }
+
+  .player_select {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: transparent;
+    color: var(--black);
+    margin: 1rem 0 2rem;
+
+    .prev_player,
+    .next_player {
+      font-size: 1.7rem;
+      width: 300px;
+      padding: 6px 0 0;
+    }
+
+    .prev_player:hover,
+    .next_player:hover {
+      cursor: pointer;
+      color: var(--white);
+    }
+
+    .prev_player:active,
+    .next_player:active {
+      cursor: pointer;
+      color: var(--black);
+      background-color: var(--white);
+    }
+  }
+
+  .timer_container {
+    margin: 0 auto;
+
+    .timer {
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .back_to_settings {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .next_component {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 1rem 0 2rem;
+
+    button {
+      padding: 0.6rem 2rem 0;
+      font-size: 36px;
+    }
+  }
+}
+
+// ~ MOBILE PORTRAIT
+@media (min-width: 300px) and (max-width: 500px) and (max-height: 950px) {
+  .TT_container {
+    .back_to_settings {
+      button {
+        display: flex;
+        align-items: center;
+        top: 0.4rem;
+        left: -1.5rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    .speaker_name {
+      padding: 6px;
+    }
+
+    .player_select {
+      button {
+        font-size: 1.5rem !important;
+      }
+    }
+  }
+}
+
+// ~ MOBILE LANDSCAPE
+@media (min-width: 450px) and (max-width: 950px) and (min-height: 300px) and (max-height: 500px) {
+  .TT_container {
+    height: 100% !important;
+  }
+}
+
+// ~ TABLET LANDSCAPE
+@media (min-width: 951px) and (max-width: 1200px) and (min-height: 501px) and (max-height: 950px) {
+  .TT_container {
+    .title {
+      margin-top: var(--margin-top);
+    }
+
+    .next_component {
+      margin-top: 1rem;
+    }
+
+    .player_select {
+      .prev_player,
+      .next_player {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

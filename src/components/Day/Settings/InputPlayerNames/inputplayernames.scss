@@ -1,0 +1,109 @@
+.IPN_container {
+  padding-top: var(--container-padding);
+
+  .title,
+  .input_text {
+    color: var(--white);
+    font-family: var(--mainFont);
+  }
+
+  .inputs {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .player_count_btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    p {
+      padding: 6px 0 0;
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    .player_count {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .player_count_btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+
+        button {
+          width: 10dvw;
+          height: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0;
+          border: none;
+          color: var(--white);
+          font-size: 1.3rem;
+          // font-weight: bold;
+          cursor: pointer;
+          background-color: var(--black);
+
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+// ~ TABLET LANDSCAPE
+@media (min-width: 951px) and (max-width: 1200px) and (min-height: 501px) and (max-height: 950px) {
+  .IPN_container {
+  }
+}
+
+// ~ MOBILE PORTRAIT
+@media (min-width: 300px) and (max-width: 500px) and (max-height: 950px) {
+  .IPN_container {
+    .inputs {
+      form {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+    }
+
+    .player_count_btn_container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+// ~ MOBILE LANDSCAPE
+@media (min-width: 450px) and (max-width: 950px) and (min-height: 300px) and (max-height: 500px) {
+  .IPN_container {
+    width: 80% !important;
+
+    .title {
+      h1 {
+        font-size: var(--title-size-mobile);
+      }
+    }
+
+    .player_count_btn_container {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

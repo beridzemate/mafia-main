@@ -1,0 +1,45 @@
+.slider_container {
+  width: 100%;
+
+  input,
+  .value_labels {
+    width: 80%;
+  }
+
+  .value_labels {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+}
+
+input[type="range"] {
+  background-color: black;
+}
+
+
+/* Target Internet Explorer */
+input[type="range"]::-ms-thumb {
+  background-color: red;
+}
+
+/* Target Chrome, Edge, and Safari */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: red;
+}
+
+/* Target Firefox */
+input[type="range"]::-moz-range-track {
+  background: red;
+}
+
+/* Target Internet Explorer */
+input[type="range"]::-ms-track {
+  background-color: red;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 4px !important;
+}
